@@ -40,7 +40,7 @@ It was first started in 2013 and is developed by Docker, Inc
 	-run docker container in background mode
 
 - "" docker attache <containerid> ""
-	- Use docker attach to attach your terminal's standard input, output, and error (or any combination of the three) to a running container using the container's ID or name.
+	-use docker attach to attach your terminal's standard input, output, and error (or any combination of the three) to a running container using the container's ID or name.
 	 This allows you to view its ongoing output or to control it interactively, as though the commands were running directly in your terminal.
 
 
