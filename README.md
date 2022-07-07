@@ -62,7 +62,29 @@ It was first started in 2013 and is developed by Docker, Inc
 # Docker CLI
 	- Docker CLI can be on diffrent client machine we can still run command by specifing host from clinet system to docker host.
 	- for example, docker -H=remote-docker-engine:2375
-				   docker -H=10.123.1.1:2375 run nginx
 
 
+Docker use C group / container groups to bind resource [cpu or memory] to container.
+	- for example, docker run --cpu=.5 ubuntu
+				   docker run --memory=100m ubuntu
+				   docker run --cpu=.5 --memory=100m ubuntu
 
+# Docker Network
+	- By default docker containers have bridge Network start IP from 172.17.*.*
+	- If you don't want to map ports start container with --network=host it will direct avaiable with host application / it will use host network.
+	  for example, docker run ubuntu --network==host
+	  network=none : it will not attach any kind of network to container.
+	-docker instpect <ContainerName>
+		it will provide network type and IP
+
+# Docker Private Registry
+	- To access private images shold have to login at private-registry.io
+	-docker login private-registry.io
+
+# Docker Build Images
+	-docker build Dockerfile -t xyzuser/my-custom-app
+
+#docker Stoage 
+	-docker run -v data_volume:/var/lib/mysql <imagename> - image name like mysql
+	-
+	
